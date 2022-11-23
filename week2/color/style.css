@@ -1,0 +1,19 @@
+h1{
+  color: blue /*keyword*/
+}
+h2{
+  color: rgb(250, 250, 7) /*rgb*/
+}
+h3{
+  color: #066d06 /*HEX*/
+}
+h4{
+  color: hsla(288, 68%, 25%, 0.777) /*HSL*/
+}
+div{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+
