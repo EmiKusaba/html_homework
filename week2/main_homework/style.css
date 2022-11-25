@@ -79,8 +79,8 @@ b{
 }
 .box{
   border: 2px solid #3882f6;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 5px;
   margin: auto;
 }
@@ -94,5 +94,13 @@ article{
 }
 #mid-article{
   background-color:#E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding:5%;
+}
+#author{
+  align-items: right;
 }
 
