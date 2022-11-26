@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url(fonts/Roboto-ThinItalic.ttf);
+}
+
+body{
+  background-color:#1f2937;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a{
+  color: aliceblue;
+}
 h1{
   display: inline;
+  color: aliceblue;
 }
