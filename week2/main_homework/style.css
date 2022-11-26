@@ -54,6 +54,7 @@ b{
 .button{
   background-color: #3882f6;;
   color: #f9faf8;
+  border-color: #f9faf8;
   width: 80px;
   height: 30px;
   display: flex;
@@ -100,7 +101,17 @@ article{
   flex-direction: column;
   padding:5%;
 }
-#author{
-  align-items: right;
+#section4{
+  background-color: #3882f6;
+  width: 70vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+#article-sec4 h3 p{
+  display: inline-block;
+  margin: none important!;
+}
+
 
