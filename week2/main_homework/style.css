@@ -3,12 +3,11 @@
   src: url(fonts/Roboto-Regular.ttf);
   font-weight: normal;
 }
-/* @font-face {
-  font-family: 'Roboto';
-  src: url(fonts/Roboto-ThinItalic.ttf);
-  font-weight: ;
-} */
 
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url(fonts/Roboto-ThinItalic.ttf);
+}
 
 /* * {
   box-sizing: border-box;
@@ -152,6 +151,11 @@ article {
   flex-direction: column;
   padding: 5%;
 }
+
+#mid-article i {
+  font-family: "Roboto-ThinItalic";
+}
+
 #author{
   margin-left: 350px;
   display: flex;
