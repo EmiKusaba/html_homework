@@ -29,6 +29,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 110px;
+  border-bottom: 1px solid #f9faf8;
 }
 
 nav {
