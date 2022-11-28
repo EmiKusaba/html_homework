@@ -20,12 +20,20 @@ header{
   align-items: center;
   border-bottom: 1px solid white;
 }
-img{
+.my-img{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.st-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -45,3 +53,20 @@ footer{
   color: white;
   border-top: 1px solid white;
 }
+ul{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+h2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
