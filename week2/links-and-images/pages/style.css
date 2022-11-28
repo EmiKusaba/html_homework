@@ -43,6 +43,19 @@ a{
 h1{
   display: inline;
   color: aliceblue;
+  font-size: 36px;
+}
+h2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+h4{
+  font-size: 16px;
 }
 footer{
   display:flex;
@@ -61,12 +74,3 @@ ul{
   margin-top: 30px;
   margin-bottom: 30px;
 }
-h2{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
