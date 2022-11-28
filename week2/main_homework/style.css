@@ -37,14 +37,6 @@ nav {
   align-items: flex-end;
 }
 
-main {
-  background-color: #1F2937;
-  display: flex;
-  justify-content: space-around;
-  padding: 7%;
-  margin-bottom: 20px;
-}
-
 p {
   color: #f9faf8;
   margin: 3px;
@@ -114,6 +106,13 @@ b {
 #logo {
   margin-left: 10%;
   margin-top: 50px;
+}
+
+#section{
+  background-color: #1F2937;
+  display: flex;
+  justify-content: space-around;
+  padding: 7%;
 }
 
 #section2 {
