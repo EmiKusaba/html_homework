@@ -1,6 +1,10 @@
-'use strict';
 
-let choice = prompt("Player: Rock, Paper or Scissors?");
+let userInput = prompt("Player: Rock, Paper or Scissors?");
+if (userInput.trim().toLowerCase() === "paper" || userInput.trim().toLowerCase() === "rock" || userInput.trim().toLowerCase() === "scissors") {
+  console.log("You chose " + `${userInput}`);
+} else {
+  console.log("Error! Try again!");
+}
 
 function computerPlay() {
   let selections = ["rock", "paper", "scissors"]
@@ -15,14 +19,12 @@ function computerPlay() {
 
 //   }
 // }
-
-let playerSelection = "";
+let playerSelection = userInput
 let computerSelection = computerPlay();
 // console.log(playRound(playerSelection, computerSelection));
 
 
 function Game(playerSelection, computerSelection) {
-  choice = playerSelection.trim().toLowerCase()
   computerPlay()
 
     if (computerSelection === playerSelection) {
