@@ -23,9 +23,8 @@ let playerSelection = userInput
 let computerSelection = computerPlay();
 // console.log(playRound(playerSelection, computerSelection));
 
-
+Game()
 function Game(playerSelection, computerSelection) {
-  computerPlay()
 
     if (computerSelection === playerSelection) {
       console.log("It's a tie!");
