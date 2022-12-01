@@ -34,19 +34,19 @@ function game(playerSelection, computerSelection) {
   }
   else if (playerSelection === "paper" && computerSelection === "rock") {
     console.log("Computer wins!")
-    result = "Computer wins"
+    result = "Computer wins!"
   }
   else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log("Computer wins!")
-    result = "Computer wins"
+    result = "Computer wins!"
   }
   else if (playerSelection === "scissors" && computerSelection === "paper") {
     console.log("Player wins!")
-    result = "Player wins"
+    result = "Player wins!"
   }
   else if (playerSelection === "scissors" && playerSelection === "rock") {
     console.log("Computer wins!")
-    result = "Computer wins"
+    result = "Computer wins!"
   }
   if (result == "Player wins!") {
     playerScore += 1
@@ -59,6 +59,8 @@ function game(playerSelection, computerSelection) {
   else {
     playerScore += 1
     computerScore += 1
+    console.log("PlayerScore" + " " + playerScore)
+    console.log("ComputerScore" + " " + computerScore)
   }
 }
 
