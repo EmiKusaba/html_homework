@@ -18,7 +18,7 @@ function getComputerSelection() {
   return result
 }
 
-function game(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
   if (playerSelection === computerSelection) {
     console.log("It's a tie!")
@@ -64,16 +64,28 @@ function game(playerSelection, computerSelection) {
   }
 }
 
+function getResult() {
+  for (i = 0; i < 5; i++) {
+    console.log(playRound());
+  }
+  if (playerScore == computerScore) {
+    console.log("Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "It's a tie!" )
+  }
+  else if (playerScore <= computerScore){
+    console.log("Result :" + "Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "Computer win!" )
+  }
+  else
+  console.log("Result :" + "Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "Player win!" )
+}
 
-// function playRound(playerSelection, computerSelection) {
-//   for (i = 0; i < 5; i++) {
 
-//   }
-// }
-
-// console.log(playRound(playerSelection, computerSelection));
 
 let playerSelection = getPlayerSelection()
 let computerSelection = getComputerSelection();
+// console.log(playRound(playSelection,computerSelection));
 
-game(playerSelection, computerSelection)
+playRound(playerSelection, computerSelection)
+// getResult(playerScore,computerScore)
+
+
+
