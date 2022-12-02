@@ -12,10 +12,10 @@ function getPlayerSelection() {
 }
 
 function getComputerSelection() {
-  let selections = ["rock", "paper", "scissors"]
-  let choice = selections[Math.floor(Math.random() * selections.length)];
-  console.log(`Computer chose ${choice}.`)
-  return choice
+  let choices = ["rock", "paper", "scissors"]
+  let selection = choices[Math.floor(Math.random() * choices.length)];
+  console.log(`Computer chose ${selection}.`)
+  return selection
 }
 
 function playRound() {
@@ -25,7 +25,7 @@ function playRound() {
   let winner = null
 
   if (playerSelection !== computerSelection) {
-    if (playerSelection == "rock") {
+    if (playerSelection === "rock") {
       winner = computerSelection === "paper" ? "Computer" : "Player"
     }
     else if (playerSelection === "paper") {
