@@ -4,7 +4,7 @@ let computerScore = 0;
 function getPlayerSelection() {
   let userInput = prompt("Player: Rock, Paper or Scissors?").trim().toLowerCase();
   if (userInput === "paper" || userInput === "rock" || userInput === "scissors") {
-    console.log("You chose " + `${userInput}`)
+    console.log("You chose " + `${userInput}.`)
   } else {
     console.log("Error! Try again!")
   }
@@ -13,79 +13,65 @@ function getPlayerSelection() {
 
 function getComputerSelection() {
   let selections = ["rock", "paper", "scissors"]
-  let result = selections[Math.floor(Math.random() * selections.length)];
-  console.log("Computer chose" + " " + result)
-  return result
+  let choice = selections[Math.floor(Math.random() * selections.length)];
+  console.log(`Computer chose ${choice}.`)
+  return choice
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+  let playerSelection = getPlayerSelection()
+  let computerSelection = getComputerSelection();
 
-  if (playerSelection === computerSelection) {
-    console.log("It's a tie!")
-    result = "It's a tie!"
+  let winner = null
+
+  if (playerSelection !== computerSelection) {
+    if (playerSelection == "rock") {
+      winner = computerSelection === "paper" ? "Computer" : "Player"
+    }
+    else if (playerSelection === "paper") {
+      winner = computerSelection === "scissors" ? "Computer" : "Player"
+    }
+    else {
+      winner = computerSelection === "rock" ? "Computer" : "Player"
+    }
   }
-  else if (playerSelection === "rock" && computerSelection === "paper") {
-    console.log("Computer wins!")
-    result = "Computer wins!" 
-  }
-  else if (playerSelection === "rock" && computerSelection === "scissors") {
-    console.log("Player wins!")
-    result = "Player wins!" 
-  }
-  else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log("Computer wins!")
-    result = "Computer wins!"
-  }
-  else if (playerSelection === "paper" && computerSelection === "scissors") {
-    console.log("Computer wins!")
-    result = "Computer wins!"
-  }
-  else if (playerSelection === "scissors" && computerSelection === "paper") {
-    console.log("Player wins!")
-    result = "Player wins!"
-  }
-  else if (playerSelection === "scissors" && playerSelection === "rock") {
-    console.log("Computer wins!")
-    result = "Computer wins!"
-  }
-  if (result == "Player wins!") {
+
+  let msg = winner === null ? "It's a tie this round!" : `${winner} wins this round!`
+  console.log(msg)
+
+  if (winner === "Player") {
     playerScore += 1
-    console.log("PlayerScore" + " " + playerScore)
   }
-  else if (result == "Computer wins!") {
+  else if (winner === "Computer") {
     computerScore += 1
-    console.log("ComputerScore" + " " + computerScore)
   }
   else {
     playerScore += 1
     computerScore += 1
-    console.log("PlayerScore" + " " + playerScore)
-    console.log("ComputerScore" + " " + computerScore)
   }
 }
 
-function getResult() {
-  for (i = 0; i < 5; i++) {
-    console.log(playRound());
+function game() {
+  for (let i = 0; i < 5; i++) {
+    console.log(`**** ROUND ${i + 1} ****`)
+    playRound();
+    console.log(`Player score: ${playerScore}, computer score: ${computerScore}.`)
   }
+
+  console.log("************************")
+
+  let msg = "Game over. "
+
   if (playerScore == computerScore) {
-    console.log("Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "It's a tie!" )
+    msg += "It's a draw!"
+  } else {
+    msg += playerScore < computerScore ? "Computer won!" : "Player won!"
   }
-  else if (playerScore <= computerScore){
-    console.log("Result :" + "Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "Computer win!" )
-  }
-  else
-  console.log("Result :" + "Playre score" + playerScore + "Computer score" + computerScore + "Result :" + "Player win!" )
+
+  console.log(msg)
 }
 
-
-
-let playerSelection = getPlayerSelection()
-let computerSelection = getComputerSelection();
-// console.log(playRound(playSelection,computerSelection));
-
-playRound(playerSelection, computerSelection)
-// getResult(playerScore,computerScore)
+game()
 
 
 
