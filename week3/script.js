@@ -2,13 +2,13 @@ let playerScore = 0;
 let computerScore = 0;
 
 function getPlayerSelection() {
-  let userInput = prompt("Player: Rock, Paper or Scissors?").toLowerCase().trim();
+  let userInput = prompt("Player: Rock, Paper or Scissors?");
   if (userInput === "paper" || userInput === "rock" || userInput === "scissors") {
     console.log("You chose " + `${userInput}.`)
   } else {
     console.log("Error! Try again!")
   }
-  return userInput
+  return userInput.toLowerCase().trim()
 }
 
 function getComputerSelection() {
